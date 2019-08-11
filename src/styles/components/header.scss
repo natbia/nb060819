@@ -1,0 +1,39 @@
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: $main-color;
+}
+.header {
+  &__logo {
+    background-image: url("assets/logo.jpg");
+    width: 70px;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    &--link {
+      position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+    }
+  }
+  &__links {
+    margin-left: 50px;
+    a {
+      color: $white;
+      padding-right: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      font-size: 14px;
+      font-weight: 500;
+       transition: 0.3s;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
