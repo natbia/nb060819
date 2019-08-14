@@ -1,3 +1,52 @@
 .container {
   padding: 40px 15px;
+  color: $dark;
+}
+
+.row {
+  display: flex;
+  div {
+    width: 100%;
+  }
+}
+
+h1,h2 {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+  border-bottom-color: $blue !important;
+}
+
+button {
+  height: 60px;
+  background-color: $dark;
+  color: $white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 300px;
+  border: 1px solid $dark;
+  transition: 0.5s;
+  font-size: 14px;
+  font-family: $fontMain;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  &:hover {
+    background-color: $yellow;
+    border-color: $yellow;
+    color: $dark;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:disabled {
+    background: $grey;
+    border: $grey;
+    color: $white;
+  }
 }

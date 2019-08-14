@@ -1,0 +1,43 @@
+.form {
+  .form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    &__field {
+      border-bottom: 2px solid #eee;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      height: 50px;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+        font-family: $fontMain;
+        &--textarea {
+          height: 80px;
+          width: 100%;
+        }
+        &--select {
+          background: $white;
+          height: 54px;
+        }
+    }
+    &__error {
+      font-size: 11px;
+      margin-top: 5px;
+      color: $red;
+    }
+    &--category {
+      width: 70%;
+    }
+    &--price {
+      width: 30%;
+      margin-right: 50px;
+    }
+  }
+}
