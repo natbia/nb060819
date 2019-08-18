@@ -10,34 +10,62 @@
     }
 
     &__field {
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid $light-gray;
       border-top: 0;
       border-left: 0;
       border-right: 0;
       height: 50px;
       font-size: 12px;
       letter-spacing: 0.2px;
-        font-family: $fontMain;
-        &--textarea {
-          height: 80px;
-          width: 100%;
-        }
-        &--select {
-          background: $white;
-          height: 54px;
-        }
+      font-family: $fontMain;
+
+      &--textarea {
+        height: 80px;
+        width: 100%;
+      }
+
+      &--select {
+        background: $white;
+        height: 54px;
+      }
     }
-    &__error {
-      font-size: 11px;
-      margin-top: 5px;
-      color: $red;
-    }
+
     &--category {
       width: 70%;
     }
+
     &--price {
       width: 30%;
       margin-right: 50px;
     }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-bottom-color: $turquoise !important;
+    }
+  }
+
+  &__errors {
+    font-size: 14px;
+    background: $red;
+    padding: 20px 40px;
+    margin-bottom: 50px;
+    color: $white;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__success {
+    background: $green;
+    padding: 20px 40px;
+    margin-bottom: 50px;
+    color: $white;
+    font-size: 14px;
   }
 }

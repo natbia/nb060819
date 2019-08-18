@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "name": "Produkt 1",
+      "price": "2.00",
+      "category": "Kategoria 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+      "id": 0
+    },
+    {
+      "name": "Produkt 2",
+      "price": "3.67",
+      "category": "Kategoria 2",
+      "description": "Sed ut ddddperspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "id": 1
+    },
+    {
+      "name": "Produkt 3",
+      "price": "2.26",
+      "category": "Kategoria 3",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+      "id": 2
+    },
+    {
+      "name": "Produkt 4",
+      "price": "244.50",
+      "category": "Kategoria 3",
+      "description": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "id": 3
+    }
+  ]
+}

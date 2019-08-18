@@ -4,6 +4,7 @@ header {
   align-items: center;
   background-color: $main-color;
 }
+
 .header {
   &__logo {
     background-image: url("assets/logo.jpg");
@@ -12,6 +13,7 @@ header {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
+
     &--link {
       position: absolute;
       width: 100%;
@@ -20,8 +22,15 @@ header {
       left: 0;
     }
   }
+
   &__links {
     margin-left: 50px;
+    @media(max-width: 576px) {
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
     a {
       color: $white;
       padding-right: 30px;
@@ -29,10 +38,21 @@ header {
       letter-spacing: 0.3px;
       font-size: 14px;
       font-weight: 500;
-       transition: 0.3s;
+      transition: 0.3s;
+      @media(max-width: 576px) {
+        padding-right: 0;
+      }
+
+      &.router-link-exact-active {
+        color: $pink;
+      }
 
       &:hover {
         color: $yellow;
+      }
+
+      &:first-child {
+        padding-bottom: 10px;
       }
     }
   }

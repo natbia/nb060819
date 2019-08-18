@@ -1,0 +1,159 @@
+.products {
+  @media(max-width: 768px) {
+    overflow-x: auto;
+  }
+
+  &__table {
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+
+    thead {
+      border-bottom: 2px solid $grey;
+
+      tr th {
+        font-weight: $regular;
+        padding: 10px 20px;
+        line-height: 20px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $grey;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    td {
+      padding: 10px 20px;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 28px;
+    }
+
+    &--name {
+      font-size: 16px;
+    }
+
+    &--price {
+      color: $main-color;
+      font-weight: $bold;
+    }
+
+    &--description {
+      line-height: 28px;
+      font-size: 14px;
+    }
+  }
+
+  &__table-number {
+    width: 2%;
+  }
+
+  &__table-name {
+    width: 15%;
+  }
+
+  &__table-price {
+    width: 10%;
+  }
+
+  &__table-category {
+    width: 18%;
+  }
+
+  &__table-description {
+    width: 50%;
+  }
+
+  &__table-button {
+    width: 5%;
+  }
+
+  &__button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+
+    &:hover {
+      background-color: $dark;
+    }
+
+    &:after {
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+      display: block;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+
+    &--edit {
+      background-color: $blue;
+
+      &:after {
+        background-image: url("./assets/icon-edit.svg");
+      }
+    }
+
+    &--save {
+      background-color: $green;
+
+      &:after {
+        background-image: url("./assets/icon-save.svg");
+      }
+    }
+  }
+
+  &__field {
+    border-bottom: 2px solid $light-gray;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 16px;
+    width: 100%;
+    font-family: $fontMain;
+    text-align: center;
+    background-color: $white;
+
+    &--description {
+      font-size: 14px;
+      line-height: 28px;
+      padding: 0 10px;
+      max-width: 100%;
+      resize: vertical;
+      height: auto;
+    }
+
+    &--error {
+      border-color: $red;
+    }
+
+    &:focus {
+      border-bottom-color: $blue;
+    }
+  }
+
+  &__editable {
+    background-color: $light-bg;
+
+    input,
+    select,
+    textarea {
+      background-color: $light-bg;
+    }
+  }
+}
+
+.router-link-exact-active.none {
+  display: none;
+}

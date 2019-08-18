@@ -4,7 +4,7 @@
     <router-link to="/" class="header__logo--link"></router-link>
   </div>
   <div class="header__links">
-    <router-link v-for="routes in links" :key="routes.id"
+    <router-link v-for="routes in links" :key="routes.id" :class="routes.class"
     :to="`${routes.page}`">{{routes.text}}</router-link>
   </div>
 </header>
@@ -20,13 +20,9 @@ export default class Header extends Vue {
       links: [
         {
           id: 0,
-          text: 'Strona główna',
-          page: '/'
-        },
-        {
-          id: 1,
           text: 'Lista produktów',
-          page: '/products'
+          page: '/',
+          class: 'none'
         },
         {
           id: 2,
