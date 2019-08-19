@@ -79,7 +79,6 @@ export default class extends Vue {
     this.$emit('save', id);
   }
   @Prop() private product?: Product;
-  // @Prop({ default: 'default value' }) private readonly product!: any;
   @Prop() private readonly id: number;
 }
 </script>

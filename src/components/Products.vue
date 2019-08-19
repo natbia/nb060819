@@ -21,12 +21,17 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import axios from 'axios';
-import products from '@/store/modules/products';
-import Product from '@/components/Product.vue';
-const baseURL = 'http://localhost:3000/products/';
 
-@Component
-export default class Products extends Vue {
+import Product from '@/components/Product.vue';
+import products from '@/store/modules/products';
+const baseURL = 'http://localhost:3000/products/';
+Vue.component('productview', Product);
+@Component({
+  components: {
+    Product
+  }
+})
+export default class extends Vue {
   private products: Product[] = [];
 
   private async save(id) {
@@ -51,6 +56,7 @@ export default class Products extends Vue {
   }
 
   private async created() {
+    this.products = products;
     try {
       const res = await axios.get(baseURL);
       this.products = res.data;

@@ -7,5 +7,5 @@ export interface Product {
   }
 
   export interface Products {
-    products: Product[];
+    products?: (Product)[] | null;
   }

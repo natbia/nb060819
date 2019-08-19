@@ -16,7 +16,7 @@
     },
     {
       "name": "Produkt 3",
-      "price": "2.26",
+      "price": "2.27",
       "category": "Kategoria 3",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
       "id": 2
@@ -24,7 +24,7 @@
     {
       "name": "Produkt 4",
       "price": "244.50",
-      "category": "Kategoria 3",
+      "category": "Kategoria 2",
       "description": "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "id": 3
     }
