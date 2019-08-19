@@ -59,7 +59,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Product extends Vue {
+export default class extends Vue {
   private data() {
     return {
       editMode: false
@@ -78,7 +78,8 @@ export default class Product extends Vue {
     this.editMode = false;
     this.$emit('save', id);
   }
-  @Prop({ default: 'default value' }) private readonly product!: string;
-  @Prop(Number) private readonly id: number | undefined;
+  @Prop() private product?: Product;
+  // @Prop({ default: 'default value' }) private readonly product!: any;
+  @Prop() private readonly id: number;
 }
 </script>

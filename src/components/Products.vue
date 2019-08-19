@@ -21,15 +21,14 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import axios from 'axios';
-const baseURL = 'http://localhost:3000/products';
+import products from '@/store/modules/products';
+import Product from '@/components/Product.vue';
+const baseURL = 'http://localhost:3000/products/';
 
 @Component
 export default class Products extends Vue {
-  private data() {
-    return {
-      products: []
-    };
-  }
+  private products: Product[] = [];
+
   private async save(id) {
     const newName = this.products[id].name;
     const newPrice = this.products[id].price;
@@ -53,7 +52,7 @@ export default class Products extends Vue {
 
   private async created() {
     try {
-      const res = await axios.get('http://localhost:3000/products');
+      const res = await axios.get(baseURL);
       this.products = res.data;
     } catch (e) {
       console.error(e);

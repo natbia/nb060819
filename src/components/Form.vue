@@ -45,16 +45,16 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import axios from 'axios';
-const baseURL = 'http://localhost:3000/products';
+const baseURL = 'http://localhost:3000/products/';
 
 @Component
-export default class Form extends Vue {
-  public products: array = [];
-  public productName: string = '';
-  public productPrice: number = '';
-  public productCategory: string = '';
-  public productDescription: string = '';
-  public errors: array = [];
+export default class extends Vue {
+  public products = '';
+  public productName = '';
+  public productPrice = '';
+  public productCategory = '';
+  public productDescription = '';
+  public errors: string[] = [];
 
   get formIsValid() {
     if (this.productName && this.productPrice && this.productCategory && this.productDescription) {
